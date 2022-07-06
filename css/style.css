@@ -3,7 +3,8 @@
 :root {
     --button-color-: #4263eb;
     --background-color: #edf2ff;
-    --button-hover: # ;
+    --button-hover: #364fc7 ;
+    --text-color: #00082f;
 }
 
 * {
@@ -18,6 +19,27 @@
     
 }
 
+body.dark-blue {
+    --background-color: #00082f;
+    --text-color: #FFFFFF;
+    --button-color-: #4263eb;
+    --button-hover: #364fc7 ;
+}
+
+body.pink {
+    --background-color: #FFF0F6;
+    --text-color: #1F000B;
+    --button-color-: #D6336C;
+    --button-hover: #A61E4D;
+}
+
+body.dark-pink {
+    --background-color: #1F000B;
+    --text-color: #FFF0F6;
+    --button-color-: #D6336C;
+    --button-hover: #A61E4D;
+}
+
 body {
     background-color: var(--background-color);
 }
@@ -26,13 +48,13 @@ body {
     margin-top: 24px;
     margin-bottom: 8px;
     font-size: 32px;
-    color: #00082f;
+    color: var(--text-color);
 }
 
 .username {
     font-family: 'Roboto Mono', monospace;
     font-size: 18px;
-    color: #00082f;
+    color: var(--text-color);
     opacity: .8;
     font-weight: 400;
 }
@@ -72,13 +94,13 @@ body {
 }
 
 .profile ul li a:hover {
-    background-color: #364fc7;
+    background-color: var(--button-hover);
 }
 
 footer {
     font-weight: 500;
     font-size: 12px;
-    color: #00082f;
+    color: var(--text-color);
     opacity: 0.6;
     transition: opacity 400ms;
 }
@@ -88,5 +110,18 @@ footer:hover {
 }
 
 footer a {
-    color: #00082f;
+    color: var(--text-color);
+}
+
+@media only screen and (max-width: 950px) {
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .profile {
+        margin-top: 60px;
+        width: 300px;
+
+    }
 }
