@@ -41,7 +41,7 @@ body.dark-pink {
 }
 
 body {
-    background-color: var(--background-color);
+    background:linear-gradient(to right, #1F000B, #A61E4D);
 }
 
 .profile h1 {
